@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Akram Tikka Shop — Gurumangat Road food street, Gulberg III, Lahore</title>
+<meta name="description" content="Akram Tikka Shop, 10 Mian Mehmood Ali Kasoori Road (Gurumangat Road food street), Gulberg III, Lahore. Chicken tikka, malai boti, mutton tikka, beef behari boti, kabab and sajji. Open daily 5 PM – 2 AM. Call 0300 4342750.">
+<meta name="theme-color" content="#0e0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#0e0d0c;
+    --night-2:#171513;
+    --night-3:#211e1b;
+    --ember:#ff4d1f;
+    --ember-2:#ff7a3d;
+    --amber:#ffb547;
+    --bone:#f4ede2;
+    --ash:#a39a8e;
+    --line:rgba(244,237,226,.1);
+    --paper:#f6f0e4;
+    --paper-ink:#1d1a17;
+    --max:1180px;
+    --r:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:"DM Sans",system-ui,sans-serif;background:var(--night);color:var(--bone);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit}
+  button{font:inherit;cursor:pointer}
+  svg{display:block}
+  .wrap{width:min(100% - 2.5rem, var(--max));margin-inline:auto}
+  .display{font-family:"Anton",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+  .mono{font-family:"DM Mono",ui-monospace,monospace}
+  .urdu{font-family:"Noto Nastaliq Urdu",serif;line-height:2}
+  .tag{display:inline-flex;align-items:center;gap:.5rem;font-family:"DM Mono",monospace;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+  .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ember);box-shadow:0 0 12px var(--ember)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:1rem 1.5rem;border-radius:14px;font-weight:700;text-decoration:none;border:0;transition:transform .15s, background .2s, box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-ember{background:var(--ember);color:#fff;box-shadow:0 0 0 0 rgba(255,77,31,.5), 0 14px 30px -12px rgba(255,77,31,.8)}
+  .btn-ember:hover{background:var(--ember-2)}
+  .btn-ghost{background:var(--night-3);color:var(--bone);border:1px solid var(--line)}
+  .btn-ghost:hover{background:#2a2622}
+
+  /* ---------- Header ---------- */
+  header.site{position:sticky;top:0;z-index:60;background:rgba(14,13,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
+  .logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+  .logo-mark{width:44px;height:44px;border-radius:12px;background:var(--ember);display:grid;place-items:center;box-shadow:0 0 24px -4px rgba(255,77,31,.7)}
+  .logo-mark svg{width:26px;height:26px}
+  .logo-text{font-family:"Anton",sans-serif;font-size:1.45rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+  .logo-text small{display:block;font-family:"DM Mono",monospace;font-size:.62rem;letter-spacing:.18em;color:var(--ash);margin-top:.3rem}
+  .links{display:flex;gap:.3rem;list-style:none}
+  .links a{display:block;padding:.55rem .9rem;border-radius:10px;text-decoration:none;font-weight:500;color:var(--ash);transition:color .2s, background .2s}
+  .links a:hover{color:var(--bone);background:var(--night-3)}
+  .live{display:inline-flex;align-items:center;gap:.5rem;font-family:"DM Mono",monospace;font-size:.78rem;padding:.45rem .8rem;border-radius:999px;border:1px solid var(--line);color:var(--ash);white-space:nowrap}
+  .live i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px #4ade80}
+  .live.off i{background:#f87171;box-shadow:0 0 10px #f87171}
+  .nav-right{display:flex;align-items:center;gap:.6rem}
+  .burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--night-2)}
+  .burger span{display:block;width:18px;height:2px;background:var(--bone);margin:4px auto;transition:transform .25s, opacity .2s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;padding:4.5rem 0 0}
+  .hero::before{content:"";position:absolute;inset:auto -10% -30% -10%;height:70%;background:radial-gradient(60% 60% at 50% 100%, rgba(255,77,31,.38), transparent 70%);pointer-events:none}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:end}
+  .hero h1{font-size:clamp(3.6rem, 11vw, 9.5rem);margin:1rem 0 .4rem}
+  .hero h1 .hot{color:var(--ember);text-shadow:0 0 40px rgba(255,77,31,.45)}
+  .hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--bone)}
+  .hero .urdu{font-size:1.5rem;color:var(--amber);direction:rtl;text-align:left}
+  .hero p.lead{color:var(--ash);font-size:1.12rem;max-width:42ch;margin:.6rem 0 2rem}
+  .hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+  .hero-meta{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:2.2rem;margin:2.6rem 0 3rem}
+  .hero-meta b{display:block;font-family:"Anton",sans-serif;font-size:2rem;font-weight:400;line-height:1;color:var(--bone)}
+  .hero-meta span{font-size:.82rem;color:var(--ash)}
+
+  .grill{position:relative;width:100%;max-width:440px;justify-self:end;aspect-ratio:1/1.1}
+  .grill svg{width:100%;height:100%}
+  .flame{transform-origin:50% 100%;animation:lick 1.1s ease-in-out infinite alternate}
+  .flame:nth-of-type(2){animation-duration:.9s;animation-delay:.2s}
+  .flame:nth-of-type(3){animation-duration:1.3s;animation-delay:.4s}
+  .flame:nth-of-type(4){animation-duration:1s;animation-delay:.1s}
+  @keyframes lick{0%{transform:scaleY(.82) scaleX(1.04)}100%{transform:scaleY(1.12) scaleX(.94)}}
+  .ember-dot{animation:float 2.4s ease-in infinite}
+  .ember-dot:nth-of-type(2){animation-delay:.6s}.ember-dot:nth-of-type(3){animation-delay:1.2s}.ember-dot:nth-of-type(4){animation-delay:1.8s}
+  @keyframes float{0%{opacity:0;transform:translateY(0)}15%{opacity:1}100%{opacity:0;transform:translate(10px,-110px)}}
+  .smk{fill:none;stroke:rgba(244,237,226,.22);stroke-width:6;stroke-linecap:round;animation:smk 4.5s ease-in-out infinite}
+  .smk:nth-of-type(2){animation-delay:1.5s}.smk:nth-of-type(3){animation-delay:3s}
+  @keyframes smk{0%{opacity:0;transform:translateY(20px)}30%{opacity:1}100%{opacity:0;transform:translateY(-40px)}}
+
+  /* Strip */
+  .strip{border-block:1px solid var(--line);background:var(--night-2);overflow:hidden}
+  .strip-track{display:inline-flex;white-space:nowrap;animation:roll 30s linear infinite;padding:1rem 0}
+  .strip-track span{font-family:"Anton",sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:.03em;padding:0 1.6rem;color:var(--bone)}
+  .strip-track span:nth-child(even){color:transparent;-webkit-text-stroke:1px var(--ash)}
+  @keyframes roll{to{transform:translateX(-50%)}}
+
+  /* Sections */
+  section{padding:6rem 0}
+  .sec-head{display:grid;grid-template-columns:1fr auto;gap:1.5rem 3rem;align-items:end;margin-bottom:3rem}
+  .sec-head h2{font-size:clamp(2.6rem, 6vw, 4.8rem);margin-top:.8rem}
+  .sec-head h2 .hot{color:var(--ember)}
+  .sec-head p{color:var(--ash);max-width:40ch}
+
+  /* Rate list (receipt) */
+  .ratelist-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start}
+  .receipt{position:relative;background:var(--paper);color:var(--paper-ink);border-radius:6px 6px 0 0;padding:2.2rem 2rem 2.6rem;box-shadow:0 40px 60px -30px rgba(0,0,0,.8);transform:rotate(-.6deg)}
+  .receipt::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:linear-gradient(-45deg, transparent 10px, var(--paper) 0) 0 0/20px 14px repeat-x, linear-gradient(45deg, transparent 10px, var(--paper) 0) 0 0/20px 14px repeat-x}
+  .r-head{text-align:center;border-bottom:2px dashed rgba(29,26,23,.35);padding-bottom:1.2rem;margin-bottom:1rem}
+  .r-head .display{font-size:2.2rem;letter-spacing:.03em}
+  .r-head .mono{font-size:.78rem;color:#6b6258;margin-top:.3rem}
+  .r-tabs{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center;margin:1.2rem 0 .6rem}
+  .r-tab{font-family:"DM Mono",monospace;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid var(--paper-ink);background:transparent;color:var(--paper-ink);border-radius:999px;padding:.4rem .85rem;transition:background .2s,color .2s}
+  .r-tab[aria-pressed="true"]{background:var(--paper-ink);color:var(--paper)}
+  .r-list{list-style:none;font-family:"DM Mono",monospace;font-size:.95rem}
+  .r-item{display:grid;grid-template-columns:auto 1fr auto;gap:.6rem;align-items:baseline;padding:.75rem 0;border-bottom:1px dotted rgba(29,26,23,.25);animation:in .35s ease both}
+  @keyframes in{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+  .r-item .nm{font-weight:500}
+  .r-item .nm small{display:block;font-size:.76rem;color:#6b6258;font-weight:400;margin-top:.15rem}
+  .r-item .dots{border-bottom:2px dotted rgba(29,26,23,.35);transform:translateY(-4px)}
+  .r-item .pr{font-weight:500;white-space:nowrap}
+  .r-item .pr em{font-style:normal;font-size:.72rem;background:var(--paper-ink);color:var(--paper);padding:.15rem .45rem;border-radius:4px;letter-spacing:.06em}
+  .r-foot{margin-top:1.4rem;text-align:center;font-family:"DM Mono",monospace;font-size:.8rem;color:#6b6258;line-height:1.7}
+  .r-foot b{color:var(--paper-ink)}
+  .barcode{height:42px;margin:1rem auto 0;width:70%;background:repeating-linear-gradient(90deg, var(--paper-ink) 0 2px, transparent 2px 4px, var(--paper-ink) 4px 5px, transparent 5px 9px, var(--paper-ink) 9px 12px, transparent 12px 14px)}
+
+  .side-cards{display:grid;gap:1rem}
+  .sc{background:var(--night-2);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;display:flex;gap:1rem;align-items:flex-start}
+  .sc .ic{width:48px;height:48px;flex:none;border-radius:14px;background:var(--night-3);display:grid;place-items:center;font-size:1.4rem}
+  .sc h3{font-size:1.1rem;margin-bottom:.2rem}
+  .sc p{color:var(--ash);font-size:.94rem}
+  .sc.hot{background:linear-gradient(135deg, rgba(255,77,31,.18), rgba(255,181,71,.08));border-color:rgba(255,77,31,.35)}
+
+  /* Party planner */
+  .planner{background:var(--night-2);border-block:1px solid var(--line)}
+  .planner-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--night)}
+  .pl-left{padding:2.6rem;display:flex;flex-direction:column;gap:1.6rem;border-right:1px solid var(--line)}
+  .pl-right{padding:2.6rem;background:radial-gradient(80% 80% at 100% 0%, rgba(255,77,31,.16), transparent 60%);display:flex;flex-direction:column;gap:1.2rem}
+  .field label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:.7rem}
+  .field label output{font-family:"Anton",sans-serif;font-size:1.8rem;font-weight:400;color:var(--amber);line-height:1}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:999px;background:linear-gradient(90deg, var(--ember) var(--p,25%), var(--night-3) var(--p,25%));outline:none}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--bone);border:5px solid var(--ember);box-shadow:0 0 0 6px rgba(255,77,31,.15)}
+  input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--bone);border:5px solid var(--ember)}
+  .opts{display:flex;flex-wrap:wrap;gap:.5rem}
+  .opt{border:1px solid var(--line);background:var(--night-2);color:var(--bone);border-radius:12px;padding:.6rem .9rem;font-weight:500;font-size:.92rem;transition:border-color .2s, background .2s}
+  .opt[aria-pressed="true"]{border-color:var(--ember);background:rgba(255,77,31,.14)}
+  .appetite{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;background:var(--night-2);border-radius:14px;padding:5px;border:1px solid var(--line)}
+  .appetite button{border:0;border-radius:10px;padding:.7rem;background:transparent;color:var(--ash);font-weight:700}
+  .appetite button[aria-pressed="true"]{background:var(--ember);color:#fff}
+  .pl-right h3{font-family:"Anton",sans-serif;font-weight:400;font-size:1.9rem;text-transform:uppercase;letter-spacing:.02em}
+  .order-lines{list-style:none;display:grid;gap:.6rem}
+  .order-lines li{display:flex;justify-content:space-between;align-items:baseline;padding:.85rem 1rem;background:var(--night-2);border:1px solid var(--line);border-radius:12px;font-weight:500}
+  .order-lines li b{font-family:"DM Mono",monospace;font-weight:500;color:var(--amber)}
+  .fine{font-size:.8rem;color:var(--ash)}
+
+  /* Street */
+  .street-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .st{border-radius:var(--r);padding:2rem;background:var(--night-2);border:1px solid var(--line);position:relative;overflow:hidden;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
+  .st .num{position:absolute;top:1rem;right:1.2rem;font-family:"Anton",sans-serif;font-size:5rem;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(244,237,226,.14)}
+  .st h3{font-size:1.3rem;margin-bottom:.4rem}
+  .st p{color:var(--ash)}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.5rem}
+  .vcard{background:var(--bone);color:var(--paper-ink);border-radius:28px;padding:2.4rem;display:flex;flex-direction:column;gap:1.5rem}
+  .vcard h2{font-size:3rem}
+  .clock{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;border-radius:16px;background:var(--paper-ink);color:var(--bone)}
+  .clock .big{font-family:"Anton",sans-serif;font-size:2rem;line-height:1}
+  .clock small{display:block;color:var(--ash);font-size:.8rem}
+  .vrow{display:grid;grid-template-columns:110px 1fr;gap:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(29,26,23,.12);font-size:.98rem}
+  .vrow span{font-family:"DM Mono",monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#7a7066;padding-top:.15rem}
+  .vcard .btn-ember{align-self:flex-start}
+  .map{border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:460px;background:var(--night-2)}
+  .map iframe{width:100%;height:100%;min-height:460px;border:0;display:block;filter:invert(.92) hue-rotate(180deg) saturate(.6) contrast(.95)}
+
+  /* Contact */
+  .contact-box{position:relative;border-radius:32px;padding:4rem 3rem;text-align:center;overflow:hidden;background:radial-gradient(70% 120% at 50% 120%, rgba(255,77,31,.55), transparent 60%), var(--night-2);border:1px solid var(--line)}
+  .contact-box h2{font-size:clamp(2.8rem, 8vw, 6rem)}
+  .contact-box p{color:var(--ash);max-width:46ch;margin:1rem auto 2rem}
+  .phone-big{display:inline-block;font-family:"Anton",sans-serif;font-size:clamp(2.2rem, 7vw, 4.4rem);letter-spacing:.02em;text-decoration:none;color:var(--bone);margin-bottom:1.6rem;transition:color .2s}
+  .phone-big:hover{color:var(--amber)}
+  .contact-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:3.5rem 0 7rem;color:var(--ash)}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+  footer h4{font-family:"DM Mono",monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bone);margin-bottom:1rem;font-weight:500}
+  footer ul{list-style:none;display:grid;gap:.5rem}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--amber)}
+  .foot-bottom{margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.84rem}
+
+  /* Mobile bar */
+  .mbar{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom));z-index:70;display:none;gap:.5rem;padding:.5rem;border-radius:18px;background:rgba(23,21,19,.94);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 20px 40px -12px rgba(0,0,0,.8)}
+  .mbar a{flex:1;text-align:center;padding:.9rem;border-radius:12px;font-weight:700;text-decoration:none}
+  .mbar .a1{background:var(--ember);color:#fff}
+  .mbar .a2{background:var(--night-3)}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:1000px){
+    .street-grid{grid-template-columns:1fr 1fr}
+    .foot{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:880px){
+    .burger{display:block}
+    .links{position:absolute;top:100%;left:.75rem;right:.75rem;flex-direction:column;background:var(--night-2);border:1px solid var(--line);border-radius:18px;padding:.5rem;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s, transform .25s, visibility 0s linear .25s}
+    .links.open{opacity:1;visibility:visible;transform:none;transition:opacity .25s, transform .25s}
+    .links a{padding:.9rem 1rem;color:var(--bone)}
+    .hero-grid,.ratelist-wrap,.planner-card,.visit-grid,.sec-head{grid-template-columns:1fr}
+    .grill{justify-self:center;max-width:320px;order:-1;margin-bottom:-1rem}
+    .hero{padding-top:2rem}
+    .pl-left{border-right:0;border-bottom:1px solid var(--line)}
+    .receipt{transform:none}
+    .mbar{display:flex}
+    section{padding:4.5rem 0}
+  }
+  @media (max-width:560px){
+    .live{display:none}
+    .street-grid,.foot{grid-template-columns:1fr}
+    .hero-meta{grid-template-columns:repeat(3,1fr);gap:1rem}
+    .hero-meta b{font-size:1.6rem}
+    .receipt{padding:1.8rem 1.2rem 2.2rem}
+    .r-list{font-size:.88rem}
+    .pl-left,.pl-right,.vcard{padding:1.6rem}
+    .contact-box{padding:3rem 1.4rem}
+    .vrow{grid-template-columns:1fr;gap:.2rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="logo" aria-label="Akram Tikka Shop home">
+      <span class="logo-mark"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M4 28 28 4"/><circle cx="12" cy="20" r="3.2" fill="#fff"/><circle cx="17" cy="15" r="3.2" fill="#fff"/><circle cx="22" cy="10" r="3.2" fill="#fff"/></svg></span>
+      <span class="logo-text">Akram Tikka<small>Gulberg III · Lahore</small></span>
+    </a>
+    <ul class="links" id="links">
+      <li><a href="#menu">Rate list</a></li>
+      <li><a href="#party">Party order</a></li>
+      <li><a href="#street">About</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="live" id="liveBadge"><i></i><span id="liveText">Open 5 PM – 2 AM</span></span>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:0">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">Gurumangat Road food street</span>
+        <h1 class="display">Coal.<br><span class="hot">Smoke.</span><br><span class="outline">Tikka.</span></h1>
+        <p class="urdu" lang="ur">اکرم تکہ شاپ</p>
+        <p class="lead">Chicken tikka, malai boti, mutton tikka, beef behari boti and seekh kabab, grilled over charcoal every night on Gulberg's busiest BBQ street.</p>
+        <div class="hero-ctas">
+          <a href="tel:+923004342750" class="btn btn-ember">📞 Call 0300 4342750</a>
+          <a href="#menu" class="btn btn-ghost">See the rate list →</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>4.2★</b><span>1,100+ Google reviews</span></div>
+          <div><b>5 PM</b><span>Grill fires up daily</span></div>
+          <div><b>2 AM</b><span>Last orders</span></div>
+        </div>
+      </div>
+
+      <div class="grill" aria-hidden="true">
+        <svg viewBox="0 0 400 440">
+          <defs>
+            <linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff4d1f"/><stop offset=".6" stop-color="#ff9a3d"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></linearGradient>
+            <linearGradient id="meat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0702a"/><stop offset="1" stop-color="#8f3210"/></linearGradient>
+            <linearGradient id="malai" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dfb2"/><stop offset="1" stop-color="#c99a5a"/></linearGradient>
+            <linearGradient id="beef" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b4a26"/><stop offset="1" stop-color="#4d1e0c"/></linearGradient>
+            <radialGradient id="coal" cx="50%" cy="30%" r="70%"><stop offset="0" stop-color="#ffcf6b"/><stop offset=".45" stop-color="#ff4d1f"/><stop offset="1" stop-color="#3a0f05"/></radialGradient>
+          </defs>
+          <path class="smk" d="M150 120 Q135 80 150 45 Q165 15 150 -15"/>
+          <path class="smk" d="M210 110 Q195 70 210 35 Q225 5 210 -25"/>
+          <path class="smk" d="M265 120 Q250 80 265 45 Q280 15 265 -15"/>
+
+          <!-- skewers -->
+          <g>
+            <rect x="30" y="168" width="340" height="5" rx="2.5" fill="#cfc6bb"/>
+            <g stroke="#6b2a0c" stroke-width="2">
+              <rect x="70" y="150" width="40" height="40" rx="12" fill="url(#meat)"/>
+              <rect x="118" y="148" width="40" height="44" rx="12" fill="url(#meat)"/>
+              <rect x="166" y="150" width="40" height="40" rx="12" fill="url(#meat)"/>
+              <rect x="214" y="149" width="40" height="42" rx="12" fill="url(#meat)"/>
+              <rect x="262" y="150" width="40" height="40" rx="12" fill="url(#meat)"/>
+            </g>
+            <rect x="370" y="162" width="24" height="17" rx="5" fill="#2a2420"/>
+          </g>
+          <g>
+            <rect x="30" y="228" width="340" height="5" rx="2.5" fill="#cfc6bb"/>
+            <g stroke="#9a7240" stroke-width="2">
+              <rect x="74" y="212" width="38" height="36" rx="14" fill="url(#malai)"/>
+              <rect x="120" y="210" width="38" height="40" rx="14" fill="url(#malai)"/>
+              <rect x="166" y="212" width="38" height="36" rx="14" fill="url(#malai)"/>
+              <rect x="212" y="211" width="38" height="38" rx="14" fill="url(#malai)"/>
+              <rect x="258" y="212" width="38" height="36" rx="14" fill="url(#malai)"/>
+            </g>
+            <rect x="370" y="222" width="24" height="17" rx="5" fill="#2a2420"/>
+          </g>
+          <g>
+            <rect x="30" y="288" width="340" height="5" rx="2.5" fill="#cfc6bb"/>
+            <rect x="70" y="274" width="240" height="34" rx="17" fill="url(#beef)" stroke="#2e1206" stroke-width="2"/>
+            <g stroke="#2e1206" stroke-width="2" opacity=".6"><path d="M110 276v30"/><path d="M150 276v30"/><path d="M190 276v30"/><path d="M230 276v30"/><path d="M270 276v30"/></g>
+            <rect x="370" y="282" width="24" height="17" rx="5" fill="#2a2420"/>
+          </g>
+          <!-- char marks -->
+          <g stroke="#3a1206" stroke-width="3" stroke-linecap="round" opacity=".5">
+            <path d="M80 165 l20 0"/><path d="M128 170 l20 0"/><path d="M176 165 l20 0"/><path d="M224 168 l20 0"/><path d="M272 165 l20 0"/>
+            <path d="M84 226 l18 0"/><path d="M130 232 l18 0"/><path d="M176 226 l18 0"/><path d="M222 230 l18 0"/><path d="M268 226 l18 0"/>
+          </g>
+          <!-- flames -->
+          <path class="flame" d="M90 395 C 70 360 95 345 92 315 C 115 340 120 365 110 395 Z" fill="url(#fl)"/>
+          <path class="flame" d="M170 398 C 150 355 180 340 175 300 C 205 335 205 370 195 398 Z" fill="url(#fl)"/>
+          <path class="flame" d="M245 398 C 228 360 255 345 250 310 C 278 340 280 370 270 398 Z" fill="url(#fl)"/>
+          <path class="flame" d="M310 395 C 295 362 318 350 315 322 C 338 348 340 372 330 395 Z" fill="url(#fl)"/>
+          <!-- grill box -->
+          <rect x="20" y="392" width="360" height="40" rx="8" fill="#1d1a17" stroke="#3a342e" stroke-width="2"/>
+          <g><ellipse cx="80" cy="396" rx="40" ry="8" fill="url(#coal)"/><ellipse cx="160" cy="398" rx="44" ry="9" fill="url(#coal)"/><ellipse cx="240" cy="398" rx="44" ry="9" fill="url(#coal)"/><ellipse cx="320" cy="396" rx="40" ry="8" fill="url(#coal)"/></g>
+          <circle class="ember-dot" cx="120" cy="370" r="3" fill="#ffcf6b"/>
+          <circle class="ember-dot" cx="200" cy="365" r="2.5" fill="#ffcf6b"/>
+          <circle class="ember-dot" cx="260" cy="372" r="3" fill="#ffcf6b"/>
+          <circle class="ember-dot" cx="300" cy="368" r="2" fill="#ffcf6b"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <span>Chicken tikka</span><span>Malai boti</span><span>Beef behari boti</span><span>Mutton tikka</span><span>Seekh kabab</span><span>Chicken sajji</span>
+      <span>Chicken tikka</span><span>Malai boti</span><span>Beef behari boti</span><span>Mutton tikka</span><span>Seekh kabab</span><span>Chicken sajji</span>
+    </div>
+  </div>
+
+  <!-- Rate list -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="tag">The menu</span>
+          <h2 class="display">Tonight's <span class="hot">rate list</span></h2>
+        </div>
+        <p>Everything is grilled to order over charcoal. Rates change with the market, so call for today's price per kg or per plate.</p>
+      </div>
+
+      <div class="ratelist-wrap">
+        <div class="receipt reveal">
+          <div class="r-head">
+            <div class="display">Akram Tikka Shop</div>
+            <div class="mono">10 Mian Mehmood Ali Kasoori Rd · Gulberg III<br>Tel 0300 4342750 · Cash only</div>
+          </div>
+          <div class="r-tabs" role="group" aria-label="Filter rate list">
+            <button class="r-tab" type="button" aria-pressed="true" data-f="all">All</button>
+            <button class="r-tab" type="button" aria-pressed="false" data-f="chicken">Chicken</button>
+            <button class="r-tab" type="button" aria-pressed="false" data-f="mutton">Mutton</button>
+            <button class="r-tab" type="button" aria-pressed="false" data-f="beef">Beef</button>
+            <button class="r-tab" type="button" aria-pressed="false" data-f="extras">Extras</button>
+          </div>
+          <ul class="r-list" id="rlist"></ul>
+          <div class="r-foot">
+            <b>Rates on call:</b> prices change with the market.<br>Ask for the per-kg rate list on WhatsApp.<br>*** THANK YOU · COME HUNGRY ***
+          </div>
+          <div class="barcode" aria-hidden="true"></div>
+        </div>
+
+        <div class="side-cards">
+          <div class="sc hot reveal"><span class="ic">🔥</span><div><h3>Grilled to order</h3><p>Every skewer goes on the coals when you order it. Nothing sits waiting.</p></div></div>
+          <div class="sc reveal"><span class="ic">⚖️</span><div><h3>Order by the kg</h3><p>Tikka, boti and kabab by weight for families, office dinners and parties.</p></div></div>
+          <div class="sc reveal"><span class="ic">🛵</span><div><h3>Home delivery nearby</h3><p>Call to check delivery to your block in Gulberg.</p></div></div>
+          <div class="sc reveal"><span class="ic">💵</span><div><h3>Cash only</h3><p>Please keep cash ready for dine-in, takeaway and delivery.</p></div></div>
+          <div class="sc reveal"><span class="ic">🌙</span><div><h3>Built for late nights</h3><p>Open till 2 AM with outdoor seating on the food street.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Party planner -->
+  <section class="planner" id="party">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="tag">Party order planner</span>
+          <h2 class="display">How much <span class="hot">BBQ</span> do you need?</h2>
+        </div>
+        <p>Tell us the guest count and what you like. We'll suggest quantities and put the order in a WhatsApp message for you.</p>
+      </div>
+
+      <div class="planner-card reveal">
+        <div class="pl-left">
+          <div class="field">
+            <label for="guests">Guests <output id="guestsOut">8</output></label>
+            <input type="range" id="guests" min="2" max="60" value="8">
+          </div>
+          <div class="field">
+            <label>Appetite</label>
+            <div class="appetite" role="group" aria-label="Appetite">
+              <button type="button" data-a="0.75" aria-pressed="false">Light</button>
+              <button type="button" data-a="1" aria-pressed="true">Normal</button>
+              <button type="button" data-a="1.3" aria-pressed="false">Hungry</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>What should we grill?</label>
+            <div class="opts" id="opts">
+              <button class="opt" type="button" data-k="Chicken tikka" aria-pressed="true">Chicken tikka</button>
+              <button class="opt" type="button" data-k="Chicken malai boti" aria-pressed="true">Malai boti</button>
+              <button class="opt" type="button" data-k="Beef behari boti" aria-pressed="false">Behari boti</button>
+              <button class="opt" type="button" data-k="Mutton tikka" aria-pressed="false">Mutton tikka</button>
+              <button class="opt" type="button" data-k="Seekh kabab" aria-pressed="true">Seekh kabab</button>
+            </div>
+          </div>
+        </div>
+        <div class="pl-right">
+          <h3>Suggested order</h3>
+          <ul class="order-lines" id="planOut"></ul>
+          <p class="fine">A rough guide of about 300 g of BBQ per person on a normal appetite, split across your picks. Naan per person is also a guide. Final rate is confirmed by the shop.</p>
+          <a class="btn btn-ember" id="planWA" href="#" target="_blank" rel="noopener">Send this order on WhatsApp →</a>
+          <a class="btn btn-ghost" href="tel:+923004342750">Or call 0300 4342750</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Street / about -->
+  <section id="street">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="tag">About us</span>
+          <h2 class="display">A night out on <span class="hot">Gurumangat</span></h2>
+        </div>
+        <p>Akram Tikka Shop sits on Mian Mehmood Ali Kasoori Road, part of Gulberg III's famous Gurumangat Road food street. Come for the smoke, stay for the tikka.</p>
+      </div>
+      <div class="street-grid">
+        <div class="st reveal"><span class="num">01</span><h3>Charcoal, always</h3><p>Real coals give the tikka its smoky edge and crisp char.</p></div>
+        <div class="st reveal"><span class="num">02</span><h3>Desi BBQ classics</h3><p>Chicken, mutton and beef cuts, plus seekh kabab and sajji.</p></div>
+        <div class="st reveal"><span class="num">03</span><h3>Sit outside</h3><p>Outdoor seating right on the food street, the way BBQ should be.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section id="visit" style="padding-top:0">
+    <div class="wrap visit-grid">
+      <div class="vcard reveal">
+        <span class="tag" style="color:#b0420f">Visit</span>
+        <h2 class="display">Find the smoke.</h2>
+        <div class="clock"><span class="big" id="clockBig">5 PM</span><div><strong id="clockTitle">Grill opens daily</strong><small id="clockSub">Open 5 PM – 2 AM, every day</small></div></div>
+        <div class="vrow"><span>Address</span><div>10 Mian Mehmood Ali Kasoori Rd, Gulberg III, Lahore (Gurumangat Road food street)</div></div>
+        <div class="vrow"><span>Hours</span><div>Monday – Sunday · 5:00 PM – 2:00 AM</div></div>
+        <div class="vrow"><span>Phone</span><div><a href="tel:+923004342750" style="text-decoration:none;font-weight:700">0300 4342750</a></div></div>
+        <div class="vrow" style="border:0;padding:0"><span>Payment</span><div>Cash only</div></div>
+        <a class="btn btn-ember" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Akram+Tikka+Shop/data=!4m7!3m6!1s0x391905fde111e8a9:0x2e45bdf53ed0bee3!8m2!3d31.5071244!4d74.3587321!16s%2Fg%2F11mpv7n84k!19sChIJqegR4f0FGTkR477QPvW9RS4">Get directions →</a>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map showing Akram Tikka Shop, Gulberg III, Lahore" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=31.5071244,74.3587321&z=17&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact-box reveal">
+        <span class="tag">Order now</span>
+        <h2 class="display" style="margin-top:.8rem">Hungry?<br>Call the grill.</h2>
+        <p>Takeaway, dine-in or a party order by the kg. Call us, or send your order on WhatsApp and we'll confirm the rate and time.</p>
+        <a class="phone-big" href="tel:+923004342750">0300 434 2750</a>
+        <div class="contact-actions">
+          <a class="btn btn-ember" href="tel:+923004342750">📞 Call now</a>
+          <a class="btn btn-ghost" href="https://wa.me/923004342750?text=Assalam%20o%20Alaikum%2C%20please%20share%20today%27s%20rate%20list." target="_blank" rel="noopener">💬 Ask for rate list</a>
+          <a class="btn btn-ghost" href="#visit">📍 Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo">
+          <span class="logo-mark"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M4 28 28 4"/><circle cx="12" cy="20" r="3.2" fill="#fff"/><circle cx="17" cy="15" r="3.2" fill="#fff"/><circle cx="22" cy="10" r="3.2" fill="#fff"/></svg></span>
+          <span class="logo-text" style="color:var(--bone)">Akram Tikka<small>Gulberg III · Lahore</small></span>
+        </a>
+        <p style="margin-top:1rem;max-width:32ch">Charcoal BBQ on the Gurumangat Road food street. Cash only.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#menu">Rate list</a></li><li><a href="#party">Party order</a></li><li><a href="#street">About</a></li><li><a href="#visit">Visit</a></li></ul></div>
+      <div><h4>Hours</h4><ul><li>Every day</li><li>5:00 PM – 2:00 AM</li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+923004342750">0300 4342750</a></li><li><a href="https://wa.me/923004342750" target="_blank" rel="noopener">WhatsApp</a></li><li>10 Mian Mehmood Ali Kasoori Rd, Gulberg III</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year"></span> Akram Tikka Shop. All rights reserved.</span><span class="mono">GRILLED IN LAHORE</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="a1" href="tel:+923004342750">📞 Call</a>
+  <a class="a2" href="#menu">Rate list</a>
+  <a class="a2" href="#visit">Directions</a>
+</div>
+
+<script>
+/* ---------- Rate list (items only; rates on call) ---------- */
+const ITEMS = [
+  {c:'chicken', n:'Chicken Tikka', d:'Leg or breast piece', u:'per piece'},
+  {c:'chicken', n:'Chicken Malai Boti', d:'Creamy, mild boneless boti', u:'per kg'},
+  {c:'chicken', n:'Chicken Tikka Boti', d:'Spicy boneless boti', u:'per kg'},
+  {c:'chicken', n:'Chicken Seekh Kabab', d:'Minced chicken on the skewer', u:'per kg'},
+  {c:'chicken', n:'Chicken Sajji', d:'Half or full, with rice', u:'half / full'},
+  {c:'mutton', n:'Mutton Tikka', d:'Bone-in pieces off the coals', u:'per kg'},
+  {c:'mutton', n:'Mutton Boti', d:'Tender boneless mutton', u:'per kg'},
+  {c:'beef', n:'Beef Behari Boti', d:'Thin, spiced and smoky', u:'per kg'},
+  {c:'beef', n:'Beef Seekh Kabab', d:'Served with naan, raita and onions', u:'per kg'},
+  {c:'extras', n:'Tandoori Naan', d:'Fresh from the tandoor', u:'per piece'},
+  {c:'extras', n:'Raita & Salad', d:'The cooling sides', u:'per plate'},
+  {c:'extras', n:'Gol Gappay', d:'Street-style, tangy and crisp', u:'per plate'},
+  {c:'extras', n:'Cold Drinks', d:'Chilled soft drinks', u:'per bottle'},
+];
+const rlist = document.getElementById('rlist');
+function renderList(f){
+  rlist.innerHTML = ITEMS.filter(i => f === 'all' || i.c === f).map((i, k) => `
+    <li class="r-item" style="animation-delay:${k * 30}ms">
+      <span class="nm">${i.n}<small>${i.d} · ${i.u}</small></span>
+      <span class="dots"></span>
+      <span class="pr"><em>CALL</em></span>
+    </li>`).join('');
+}
+document.querySelectorAll('.r-tab').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.r-tab').forEach(x => x.setAttribute('aria-pressed', x === b));
+  renderList(b.dataset.f);
+}));
+renderList('all');
+
+/* ---------- Party planner ---------- */
+const guests = document.getElementById('guests');
+let appetite = 1;
+function kgFmt(kg){ const r = Math.max(.5, Math.round(kg * 2) / 2); return (r % 1 ? r.toFixed(1) : r) + ' kg'; }
+function plan(){
+  const g = +guests.value;
+  document.getElementById('guestsOut').textContent = g;
+  guests.style.setProperty('--p', ((g - 2) / 58 * 100) + '%');
+  const picks = [...document.querySelectorAll('.opt[aria-pressed="true"]')].map(b => b.dataset.k);
+  const totalKg = g * 0.3 * appetite;
+  const lines = picks.length ? picks.map(p => [p, kgFmt(totalKg / picks.length)]) : [['Pick at least one item', '—']];
+  const naan = Math.ceil(g * 1.5 * appetite);
+  lines.push(['Tandoori naan', naan + ' pcs']);
+  lines.push(['Raita & salad', Math.max(1, Math.ceil(g / 4)) + ' plates']);
+  document.getElementById('planOut').innerHTML = lines.map(([a, b]) => `<li><span>${a}</span><b>${b}</b></li>`).join('');
+  const msg = ['Assalam o Alaikum! Party order from the website:', `Guests: ${g}`, ...lines.map(([a, b]) => `• ${a}: ${b}`), '', 'Please confirm today\'s rate and time.'].join('\n');
+  document.getElementById('planWA').href = `https://wa.me/923004342750?text=${encodeURIComponent(msg)}`;
+}
+guests.addEventListener('input', plan);
+document.querySelectorAll('.appetite button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.appetite button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  appetite = +b.dataset.a; plan();
+}));
+document.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => {
+  b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true'); plan();
+}));
+plan();
+
+/* ---------- Open / closed (Lahore time, 5 PM – 2 AM) ---------- */
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi' }));
+const m = now.getHours() * 60 + now.getMinutes();
+const isOpen = m >= 1020 || m < 120;
+const badge = document.getElementById('liveBadge');
+badge.classList.toggle('off', !isOpen);
+document.getElementById('liveText').textContent = isOpen ? 'Grill is on · till 2 AM' : 'Closed · opens 5 PM';
+let minsLeft;
+if (isOpen) {
+  minsLeft = m >= 1020 ? (1440 - m) + 120 : 120 - m;
+  document.getElementById('clockTitle').textContent = 'Grill is on right now';
+} else {
+  minsLeft = 1020 - m;
+  document.getElementById('clockTitle').textContent = 'Grill opens at 5 PM';
+}
+const h = Math.floor(minsLeft / 60), mm = minsLeft % 60;
+document.getElementById('clockBig').textContent = `${h}h ${String(mm).padStart(2, '0')}m`;
+document.getElementById('clockSub').textContent = isOpen ? 'until last orders at 2 AM' : 'until the coals are lit';
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Nav ---------- */
+const burger = document.getElementById('burger'), links = document.getElementById('links');
+burger.addEventListener('click', () => {
+  const o = links.classList.toggle('open');
+  burger.setAttribute('aria-expanded', o);
+  burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu');
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
+
+/* ---------- Reveal ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
